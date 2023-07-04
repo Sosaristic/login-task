@@ -11,7 +11,7 @@ import CountryFlag from "@/components/CountryFlag";
 import Link from "next/link";
 import ThirdPartyAuth from "@/components/ThirdPartyAuth";
 
-export default function page() {
+export default function Page() {
   
 
   const formik = useFormik({
