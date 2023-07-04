@@ -1,7 +1,29 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter, Jost, Righteous, Kablammo, Permanent_Marker } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const righteous = Righteous({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-righteous",
+});
+
+const jost = Jost({
+  subsets: ["latin"],
+  variable: "--font-jost",
+});
+const permanent_marker = Permanent_Marker({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-permanent_marker",
+});
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +33,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body 
+        className={` ${inter.variable} ${righteous.variable} ${jost.variable} ${permanent_marker.variable}`}
+        >
+        {children}
+        </body>
     </html>
   )
 }
